@@ -1,0 +1,84 @@
+body {
+    font-family: Roboto;
+    background-color: #E5E5E5;
+}
+.project_name {
+    font-family: Roboto;
+    font-size: 30px;
+}
+.bg_color {
+    background-color: #EBECF1;
+}
+.bg_body {
+    background-color: #E5E5E5;
+    margin: 20px;
+}
+.bg_form {
+    background-color: #FFFFFF;
+}
+.table_th th {
+    border-bottom: 0px !important;
+    border-top: none !important
+} 
+.table_th td {
+    border-top: none !important
+}
+
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: white;
+    z-index: 999;
+}
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+input {
+    border: none;
+    border-bottom: 1px solid #666666;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.thead-light th {
+    background-color: #E6E7F0 !important;
+    font-weight: normal;
+}
+.btn-light {
+    background-color: #EAEBF4 !important;
+}
+.for_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+ul li {
+    list-style: none;
+    margin: 10px;
+}
+.for_sidebar {
+    padding: 0px;
+    background-color: #F5F5F5;
+    color: #3B3D4D;
+    cursor: pointer;
+}
