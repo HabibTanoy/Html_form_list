@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Form One</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
   <!--Navbar -->
     <section>
         <nav class="navbar navbar-expand-lg navbar-light bg_color box-shadow">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" onclick="w3_open()" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <div class="form-group border">
-                <label class="" for="exampleFormControlSelect1">Search ID</label>
+              <div>
+                <label>Search ID</label>
                 <div class="form-group has-search">
                   <span class="fa fa-search form-control-feedback"></span>
                   <input type="text" class="form-control">
@@ -34,24 +33,26 @@
           </nav>
     </section>
 <!-- Sidebar -->
-<div class="sidebar" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+<div class="sidebar" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large btn btn-danger">Close &times;</button>
   <ul class="list-group">
-    <li class="list-group-item">First item</li>
-    <li class="list-group-item">Second item</li>
-    <li class="list-group-item">Third item</li>
+    <li class="list-group-item text-uppercase">cbc</li>
+    <li class="list-group-item text-uppercase">rbs</li>
+    <li class="list-group-item">Chest X-Ray</li>
+    <li class="list-group-item">Ultrasound</li>
+    <li class="list-group-item text-uppercase">ecg</li>
+    <li class="list-group-item">CT Scan</li>
   </ul>
 </div>
 
 <!-- Page Content -->
-
     <section class="bg_body">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-2 for_sidebar">
-              <div style="height: 100%;">
+          <div class="col-md-2 for_sidebar mt-3">
+              <div style="height: 100%; width: 100%;" class="for_ul">
                 <ul class="pt-3">
-                  <li class="text-uppercase">cbc</li>
+                  <li class="text-uppercase for_cbc">cbc</li>
                   <li class="text-uppercase">rbs</li>
                   <li>Chest X-Ray</li>
                   <li>Ultrasound</li>
@@ -59,56 +60,60 @@
                   <li>CT Scan</li>
                 </ul>
               </div>
-
           </div>
-          <div class="col-md-10">
+          <div class="col-md-10" style="margin:0 auto; width: 100vw !important;">
+            
+            <style>
+              .form-fields li{
+                padding: 10px;
+              }
+            </style>
 
-            <div class="container-fluid mb-3"> 
-              <div class="row bg_form" >
-                <div class="col-md-12" >
-                  <form class="table_th mt-3">
-                    <table class="table ">
-                      <thead>
-                        <tr>
-                          <td class="text-right">Patient name:</td>
-                          <th>
-                            <input type="text">
-                          </th>
-                          <td scope="col" class="text-right">Patient ID:</td>
-                          <th scope="col">
-                            <input type="text">
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td scope="row" class="text-right">Patient Age:</td>
-                          <td>
-                            <input type="text">
-                          </td>
-                          <td class="text-right">Mobile number:</td>
-                          <td>
-                            <input type="text">
-                          </td>
-                        </tr>
-                        <tr>
-                          <td scope="row" class="text-right">Gender:</td>
-                          <td>
-                            <input type="text">
-                          </td>
-                          <td class="text-right">Consultant name:</td>
-                          <td>
-                            <input type="text">
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form>
+            <div class="row bg_form m-1 my-4" >
+              <div class="col-md-12 w-100 border">
+                <!-- <div class="form-fields-container border" style="width: 50%;float: left;">
+                  <ul class="form-fields border p-0">
+                      <li>
+                        Patient name: <input type="text">
+                      </li>
+                      <li>
+                        Patient age: <input type="text">
+                      </li>
+                      <li>
+                        Gender: <input type="text">
+                      </li>
+                  </ul>
+                </div> -->
+                <div class="form-fields-container" style="width: 50%;float: right;">
+                  <ul class="form-fields p-0">
+                    <li>
+                      Patient ID: <input type="text">
+                    </li>
+                    <li>
+                      Mobile number: <input type="text">
+                    </li>
+                    <li>
+                      Consultant name: <input type="text">
+                    </li>
+                </ul>
+                </div>
+                <div class="form-fields-container" style="width: 50%;float: right;">
+                  <ul class="form-fields p-0">
+                    <li>
+                      Patient name: <input type="text">
+                    </li>
+                    <li>
+                      Patient age: <input type="text">
+                    </li>
+                    <li>
+                      Gender: <input type="text">
+                    </li>
+                </ul>
                 </div>
               </div>
-            </div>
+            </div> 
             <!--end of form-->
-            <div class="bg_form p-2">
+            <div class="bg_form m-1 p-4">
               <table class="table result border-bottom">
                 <thead class="thead-light">
                   <tr>
@@ -157,9 +162,9 @@
               </table>
               <!--end of table-->
             <div class="container my-5 pt-5">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="form-group">
+              <div class="row ">
+                <div class="col-md-4 col_edit">
+                  <div class="form-group for_select">
                     <label for="exampleFormControlSelect1">Report by</label>
                     <select class="form-control">
                       <option></option>
@@ -170,14 +175,14 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 for_hide">
                   <div class="for_btn">
                     <button type="button" class="btn btn-light">Save and Print</button>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect1">Test</label>
+                <div class="col-md-4 col_modify">
+                  <div class="form-group float-right for_select">
+                    <label for="exampleFormControlSelect1">Checked by</label>
                     <select class="form-control" id="exampleFormControlSelect1">
                       <option></option>
                       <option></option>
@@ -187,11 +192,14 @@
                     </select>
                   </div>
                 </div>
+                <div class="col-md-4 for_open">
+                  <div class="for_btn">
+                    <button type="button" class="btn btn-light">Save and Print</button>
+                  </div>
+                </div>
               </div>
             </div>
             </div>
-
-
           </div>
         </div>
       </div>
