@@ -3,7 +3,7 @@ body {
     background-color: #E5E5E5;
 }
 .project_name {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 30px;
     color: #1E1D2F;
 }
@@ -12,7 +12,6 @@ body {
 }
 .bg_body {
     background-color: #E5E5E5;
-    /* margin: 20px; */
 }
 .bg_form {
     background-color: #FFFFFF;
@@ -36,6 +35,9 @@ body {
 #mySidebar {
     display:none; 
     width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 .has-search .form-control {
     padding-left: 2.375rem;
@@ -69,6 +71,14 @@ button:focus {
 .form-fields input {
     width: 70%;
 }
+.form_fields {
+    margin:0 auto; 
+    width: 100vw !important; 
+    padding-right: 0px !important;
+}
+.form-fields li{
+    padding: 10px;
+  }
 .btn-light {
     background-color: #EAEBF4 !important;
 }
@@ -82,6 +92,10 @@ button:focus {
 }
 .for_cbc {
     color: #D7382E;
+}
+.for_ul {
+    height: 100%; 
+    width: 100%;
 }
 .for_ul ul li {
     list-style: none;
@@ -123,25 +137,33 @@ ul {
     width: 1em; 
     margin-left: -.5em;
 }
-
-.form-fields{
-    /* margin: 20px !important; */
+.form-fields-container {
+    width: 50%;
+    float: right;
+}
+.form-fields li{
+    text-align: right;
+}
+.result td, .result th {
+    border-top: 0px !important;
 }
 
-@media (max-width: 991.98px) {
-    .for_sidebar {
-        display: none;
-    }
-    .for_consultant{
-        float: none !important;
-    }
-}
-@media (min-width: 768px) { 
-    .for_open {
-        display: none;
+/* media queries */
+
+@media (min-width: 481px) and (max-width: 575px) { 
+    .form-fields-container {
+        width: 50% !important;
     }
  }
-@media (max-width: 767.98px) { 
+@media (max-width: 575.98px) { 
+    .form-fields-container {
+        width: 50% !important;
+    }
+    .p-4 {
+        padding: 0.7rem !important;
+    }   
+ }
+ @media (max-width: 767.98px) { 
     .for_hide {
         display: none;
     }
@@ -158,25 +180,23 @@ ul {
         float: none !important;
     }
 }
-/* .form-fields{
-    border: 1px solid green;
-} */
 
-.form-fields li{
-    /* margin-right: 150px; */
-    /* margin: 0 !important; */
-    text-align: right;
-}
-.form-fields li{
-    /* width: 100%; */
-    /* border: 1px solid red; */
-}
+ @media (min-width: 768px) { 
+    .for_open {
+        display: none;
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 991.98px) { 
+    .col-md-10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+ }
 
 @media (max-width: 960px) { 
     .form-fields-container{
         width: 100% !important;
-        /* padding-right: 55%; */
-        /* border: 1px solid red; */
     }
 
     .form-fields{
@@ -184,12 +204,29 @@ ul {
         margin: 0 !important;
         text-align: right;
     }
-}
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    .col-md-10 {
-        flex: 0 0 100%;
-        max-width: 100%;
+    .px-3 {
+        padding-left: .1rem !important;
     }
- }
+    .px-5 {
+        padding-left: .5rem !important;
+        padding-right: .5rem !important;
+    }
+    .p-3 {
+        padding: .5rem !important;
+    }
+    .pb-5 {
+        padding-bottom: .7rem !important;
+    }
+}
 
- 
+@media (max-width: 991.98px) {
+    .for_sidebar {
+        display: none;
+    }
+    .for_consultant{
+        float: none !important;
+    }
+}
+
+
+
