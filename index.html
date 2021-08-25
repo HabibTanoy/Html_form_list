@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Form One</title>
-    <link rel="stylesheet" href="./css/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./vendor/fontawesome//font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Form One</title>
 </head>
 <body>
-  <!--Navbar -->
+  <!--Navbar start -->
     <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg_color box-shadow">
-            <button class="navbar-toggler" onclick="sidebar_open()" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <div>
+          <nav class="navbar navbar-light bg_color box-shadow">
+            <div class="container">
+              <div class="search-hide">
                 <label>Search ID</label>
                 <div class="has-search">
                   <span class="fa fa-search form-control-feedback"></span>
@@ -32,8 +27,8 @@
             </div>
           </nav>
     </section>
-    <!-- Sidebar -->
-    <div class="sidebar" id="mySidebar">
+    <!-- Navbar end -->
+    <!-- <div class="sidebar" id="">
       <button onclick="sidebar_close()" class="w3-bar-item w3-large btn btn-danger">Close &times;</button>
       <ul class="list-group">
         <li class="list-group-item text-uppercase">cbc</li>
@@ -43,14 +38,46 @@
         <li class="list-group-item text-uppercase">ecg</li>
         <li class="list-group-item">CT Scan</li>
       </ul>
+    </div> -->
+    <div id="wrapper" class="toggled">
+    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+    <div id="sidebar-wrapper" class="sidebar-for-mobile">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+                        Start Bootstrap
+                    </a>
+        </li>
+        <li>
+          <a href="#">Dashboard</a>
+        </li>
+        <li>
+          <a href="#">Shortcuts</a>
+        </li>
+        <li>
+          <a href="#">Overview</a>
+        </li>
+        <li>
+          <a href="#">Events</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
     </div>
-
-<!-- Page Content -->
+  </div>
+<!-- web sidebar start -->
     <section class="bg_body">
       <div class="container-fluid">
         <div class="row px-3 py-3">
           <div class="col-md-2 for_sidebar" >
-              <div class="for_ul">
+              <div class="sidebar_ul">
                 <ul class="pt-3">
                   <li class="text-uppercase for_cbc">cbc</li>
                   <li class="text-uppercase">rbs</li>
@@ -61,6 +88,8 @@
                 </ul>
               </div>
           </div>
+          <!--web sidebar end-->
+          <!--Patient details start-->
           <div class="col-md-10 form_fields">
             <div class="row bg_form mb-4 m-0" >
               <div class="col-md-12 w-100">
@@ -92,9 +121,10 @@
                 </div>
               </div>
             </div> 
-            <!--end of form-->
+            <!--end of Patient details-->
+            <!--start table-->
             <div class="bg_form p-4">
-              <table class="table result border-bottom">
+              <table class="table result">
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">Test</th>
@@ -141,6 +171,7 @@
                 </tbody>
               </table>
               <!--end of table-->
+              <!--Report and check option-->
             <div class="container my-5 pt-5">
               <div class="row ">
                 <div class="col-md-4 col_edit">
@@ -179,11 +210,18 @@
                 </div>
               </div>
             </div>
+            <!--end of Report and check-->
             </div>
           </div>
         </div>
       </div>
     </section>
-    <script src="./js/index.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
+    <script>
+      $("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+    </script>
 </body>
 </html>
