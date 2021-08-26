@@ -7,14 +7,18 @@
   <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./vendor/fontawesome//font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+  <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
   <title>Form One</title>
 </head>
 <body>
   <!--Navbar start -->
     <section>
-          <nav class="navbar navbar-light bg_color box-shadow">
+          <nav class="navbar navbar-light bg_color shadow">
+            <div class="sidebar-for-mobile">
+              <a href="" id="menu-toggle"  class="navbar-toggler" type="button" style="position: absolute;top: 0;right: 0;">
+                <span class="navbar-toggler-icon"></span>
+              </a>
+            </div>
             <div class="container">
               <div class="search-hide">
                 <label>Search ID</label>
@@ -28,54 +32,36 @@
           </nav>
     </section>
     <!-- Navbar end -->
-    <!-- <div class="sidebar" id="">
-      <button onclick="sidebar_close()" class="w3-bar-item w3-large btn btn-danger">Close &times;</button>
-      <ul class="list-group">
-        <li class="list-group-item text-uppercase">cbc</li>
-        <li class="list-group-item text-uppercase">rbs</li>
-        <li class="list-group-item">Chest X-Ray</li>
-        <li class="list-group-item">Ultrasound</li>
-        <li class="list-group-item text-uppercase">ecg</li>
-        <li class="list-group-item">CT Scan</li>
-      </ul>
-    </div> -->
-    <div id="wrapper" class="toggled">
-    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-    <div id="sidebar-wrapper" class="sidebar-for-mobile">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-          <a href="#">
-                        Start Bootstrap
-                    </a>
-        </li>
-        <li>
-          <a href="#">Dashboard</a>
-        </li>
-        <li>
-          <a href="#">Shortcuts</a>
-        </li>
-        <li>
-          <a href="#">Overview</a>
-        </li>
-        <li>
-          <a href="#">Events</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Services</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
+    <!--sidebar start-->
+    <div id="wrapper" class="toggled sidebar-for-mobile sidebar_toggle">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav mt-5">
+          <li>
+            <a href="#" class="text-uppercase for_cbc">cbc</a>
+          </li>
+          <li>
+            <a href="#" class="text-uppercase">rbs</a>
+          </li>
+          <li>
+            <a href="#">Chest X-Ray</a>
+          </li>
+          <li>
+            <a href="#">Ultrasound</a>
+          </li>
+          <li>
+            <a href="#" class="text-uppercase">ecg</a>
+          </li>
+          <li>
+            <a href="#">CT Scan</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-<!-- web sidebar start -->
+<!--sidebar end-->
     <section class="bg_body">
       <div class="container-fluid">
         <div class="row px-3 py-3">
+          <!-- web sidebar start -->
           <div class="col-md-2 for_sidebar" >
               <div class="sidebar_ul">
                 <ul class="pt-3">
@@ -177,7 +163,7 @@
                 <div class="col-md-4 col_edit">
                   <div class="form-group for_select">
                     <label for="exampleFormControlSelect1">Report by</label>
-                    <select class="form-control">
+                    <select class="form-select">
                       <option></option>
                       <option></option>
                       <option></option>
@@ -186,15 +172,17 @@
                     </select>
                   </div>
                 </div>
+                <!--save and print btn-->
                 <div class="col-md-4 for_hide">
                   <div class="for_btn">
                     <button type="button" class="btn btn-light">Save and Print</button>
                   </div>
                 </div>
+                <!--save and print btn-->
                 <div class="col-md-4 col_modify">
                   <div class="form-group float-right for_select">
                     <label for="exampleFormControlSelect1">Checked by</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-select">
                       <option></option>
                       <option></option>
                       <option></option>
@@ -203,11 +191,13 @@
                     </select>
                   </div>
                 </div>
+                <!--save and print btn mobile version-->
                 <div class="col-md-4 for_open">
                   <div class="for_btn">
                     <button type="button" class="btn btn-light">Save and Print</button>
                   </div>
                 </div>
+                <!--end save and print btn mobile version-->
               </div>
             </div>
             <!--end of Report and check-->
@@ -216,12 +206,6 @@
         </div>
       </div>
     </section>
-    <!-- <script src="./js/index.js"></script> -->
-    <script>
-      $("#menu-toggle").click(function(e) {
-  e.preventDefault();
-  $("#wrapper").toggleClass("toggled");
-});
-    </script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

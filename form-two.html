@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Form Two</title>
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/fontawesome//font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/index.css">
-</head>
+    <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+    <title>Form Two</title>
+  </head>
 <body>
-  <!--Navbar -->
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg_color box-shadow">
-            <button class="navbar-toggler" onclick="sidebar_open()" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <p class="mx-auto project_name">Hospital Name</p>
-            </div>
-          </nav>
-    </section>
-    <!-- Sidebar -->
-    <div class="sidebar" id="mySidebar">
-      <button onclick="sidebar_close()" class="w3-bar-item w3-large btn btn-danger">Close &times;</button>
-      <ul class="list-group">
-        <li class="list-group-item text-uppercase">cbc</li>
-        <li class="list-group-item text-uppercase">rbs</li>
-        <li class="list-group-item">Chest X-Ray</li>
-        <li class="list-group-item">Ultrasound</li>
-        <li class="list-group-item text-uppercase">ecg</li>
-        <li class="list-group-item">CT Scan</li>
-      </ul>
-    </div>
-
-<!-- Page Content -->
+  <!--Navbar start -->
+  <section>
+    <nav class="navbar navbar-light bg_color shadow">
+      <div class="sidebar-for-mobile">
+        <a href="" id="menu-toggle"  class="navbar-toggler" type="button" style="position: absolute;top: 0;right: 0;">
+          <span class="navbar-toggler-icon"></span>
+        </a>
+      </div>
+      <div class="container">
+        <p class="mx-auto project_name">Hospital Name</p>
+      </div>
+    </nav>
+  </section>
+<!-- Navbar end -->
+<!--sidebar start-->
+<div id="wrapper" class="toggled sidebar-for-mobile sidebar_toggle">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav mt-5">
+      <li>
+        <a href="#" class="text-uppercase for_cbc">cbc</a>
+      </li>
+      <li>
+        <a href="#" class="text-uppercase">rbs</a>
+      </li>
+      <li>
+        <a href="#">Chest X-Ray</a>
+      </li>
+      <li>
+        <a href="#">Ultrasound</a>
+      </li>
+      <li>
+        <a href="#" class="text-uppercase">ecg</a>
+      </li>
+      <li>
+        <a href="#">CT Scan</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--sidebar end-->
     <section class="bg_body">
       <div class="container-fluid">
         <div class="row px-3 py-3">
-          <div class="col-md-2 for_sidebar" >
-              <div class="for_ul">
-                <ul class="pt-3">
-                  <li class="text-uppercase for_cbc">cbc</li>
-                  <li class="text-uppercase">rbs</li>
-                  <li>Chest X-Ray</li>
-                  <li>Ultrasound</li>
-                  <li class="text-uppercase">ecg</li>
-                  <li>CT Scan</li>
-                </ul>
-              </div>
-          </div>
+           <!-- web sidebar start -->
+           <div class="col-md-2 for_sidebar" >
+            <div class="sidebar_ul">
+              <ul class="pt-3">
+                <li class="text-uppercase for_cbc">cbc</li>
+                <li class="text-uppercase">rbs</li>
+                <li>Chest X-Ray</li>
+                <li>Ultrasound</li>
+                <li class="text-uppercase">ecg</li>
+                <li>CT Scan</li>
+              </ul>
+            </div>
+        </div>
+        <!--web sidebar end-->
+        <!--start Patient form-->
           <div class="col-md-10 form_fields">
             <div class="row bg_form mb-4 m-0" >
               <div class="col-md-12 w-100">
@@ -85,9 +100,12 @@
                 </div>
               </div>
             </div> 
-            <!--end of form-->
+            <!--end Patient form-->
             <div class="bg_form p-4">
+              <!--text box-->
               <textarea class="text_box w-100" name="" id="" cols="108" rows="11"></textarea>
+              <!--end text boiox-->
+              <!--comments section-->
               <div class="form-group mt-2">
                 <label class="comments">Comments:</label>
                 <div class="border p-2 for_list">
@@ -101,12 +119,14 @@
                     </ul>
                 </div>
               </div>
+              <!--end comments section-->
+              <!--Report and check option-->
             <div class="container my-5 pt-5">
               <div class="row ">
                 <div class="col-md-4 col_edit">
-                  <div class="form-group for_select">
+                  <div class="for_select">
                     <label for="exampleFormControlSelect1">Report by</label>
-                    <select class="form-control">
+                    <select class="form-select">
                       <option></option>
                       <option></option>
                       <option></option>
@@ -115,15 +135,17 @@
                     </select>
                   </div>
                 </div>
+                <!--save and print btn-->
                 <div class="col-md-4 for_hide">
                   <div class="for_btn">
                     <button type="button" class="btn btn-light">Save and Print</button>
                   </div>
                 </div>
+                <!--save and print btn-->
                 <div class="col-md-4 col_modify">
                   <div class="form-group float-right for_select">
                     <label for="exampleFormControlSelect1">Checked by</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-select">
                       <option></option>
                       <option></option>
                       <option></option>
@@ -132,13 +154,16 @@
                     </select>
                   </div>
                 </div>
+                <!--save and print btn for mobile version-->
                 <div class="col-md-4 for_open">
                   <div class="for_btn">
                     <button type="button" class="btn btn-light">Save and Print</button>
                   </div>
                 </div>
+                <!--end save and print btn mobile version-->
               </div>
             </div>
+            <!--end of Report and check-->
             </div>
           </div>
         </div>

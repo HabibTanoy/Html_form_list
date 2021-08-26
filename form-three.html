@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Form Three</title>
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/fontawesome//font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/index.css">
-</head>
+    <title>Form Three</title>
+  </head>
 <body>
-  <!--Navbar -->
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg_color shadow">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <p class="mx-auto project_name">Hospital Name</p>
-            </div>
-          </nav>
-    </section>
+   <!--Navbar start -->
+   <section>
+    <nav class="navbar navbar-light bg_color shadow">
+      <div class="container">
+        <p class="mx-auto project_name">Hospital Name</p>
+      </div>
+    </nav>
+  </section>
+<!-- Navbar end -->
 <!-- Page Content -->
     <section class="bg_body pt-3 pb-5 px-5">
             <div class="container-fluid mb-3"> 
@@ -72,7 +67,8 @@
             </div>
             <!--end of form-->
             <div class="bg_form p-3">
-                <h4 class="text-center mt-2 mb-3">Biochemist Analyzer Report</h4>
+                <h4 title="Biochemist Analyzer Report" class="text-center mt-2 mb-3">Biochemist Analyzer Report</h4>
+                <!--first table start-->
                 <table class="table result">
                   <thead class="thead-light">
                     <tr>
@@ -119,9 +115,9 @@
                     </tr>
                   </tbody>
                 </table>
-                <!--end of table-->
+                <!--end of first table-->
             </div>
-            <!--second table-->
+            <!--second table start-->
             <div class="bg_form p-3">
                 <h4 class="text-center mb-3">Blood Examination Report</h4>
                 <table class="table result">
@@ -170,10 +166,11 @@
                     </tr>
                   </tbody>
                 </table>
-                <!--end of table-->
+                <!--end of second table-->
             </div>
-            <div class="container-fluid bg_form">
-                <div class="row">
+            <!--Pathologist and Consultant signature option-->
+            <div class="container-fluid bg_form pb-5">
+                <div class="row p-3">
                     <div class="col-md-6">
                         <div class="form-group">
                             <input type="text">
@@ -182,7 +179,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group for_consultant float-right">
+                        <div class="form-group for_consultant float-end">
                             <input type="text">
                             <br>
                             <label for="exampleFormControlSelect1">Consultant</label>
