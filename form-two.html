@@ -1,174 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./vendor/fontawesome//font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
-    <title>Form Two</title>
-  </head>
-<body>
-  <!--Navbar start -->
-  <section>
-    <nav class="navbar navbar-light bg_color shadow">
-      <div class="sidebar-for-mobile">
-        <a href="" id="menu-toggle"  class="navbar-toggler" type="button" style="position: absolute;top: 0;right: 0;">
-          <span class="navbar-toggler-icon"></span>
-        </a>
-      </div>
-      <div class="container">
-        <p class="mx-auto project_name">Hospital Name</p>
-      </div>
-    </nav>
-  </section>
-<!-- Navbar end -->
-<!--sidebar start-->
-<div id="wrapper" class="toggled sidebar-for-mobile sidebar_toggle">
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav mt-5">
-      <li>
-        <a href="#" class="text-uppercase for_cbc">cbc</a>
-      </li>
-      <li>
-        <a href="#" class="text-uppercase">rbs</a>
-      </li>
-      <li>
-        <a href="#">Chest X-Ray</a>
-      </li>
-      <li>
-        <a href="#">Ultrasound</a>
-      </li>
-      <li>
-        <a href="#" class="text-uppercase">ecg</a>
-      </li>
-      <li>
-        <a href="#">CT Scan</a>
-      </li>
-    </ul>
-  </div>
-</div>
-<!--sidebar end-->
-    <section class="bg_body">
-      <div class="container-fluid">
-        <div class="row px-3 py-3">
-           <!-- web sidebar start -->
-           <div class="col-md-2 for_sidebar" >
-            <div class="sidebar_ul">
-              <ul class="pt-3">
-                <li class="text-uppercase for_cbc">cbc</li>
-                <li class="text-uppercase">rbs</li>
-                <li>Chest X-Ray</li>
-                <li>Ultrasound</li>
-                <li class="text-uppercase">ecg</li>
-                <li>CT Scan</li>
-              </ul>
-            </div>
-        </div>
-        <!--web sidebar end-->
-        <!--start Patient form-->
-          <div class="col-md-10 form_fields">
-            <div class="row bg_form mb-4 m-0" >
-              <div class="col-md-12 w-100">
-                <div class="form-fields-container">
-                  <ul class="form-fields p-0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./assets/vendor/fontawesome//font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="./assets/css/custom.css" />
+        <script src="./assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+        <title>Form Two</title>
+    </head>
+    <body>
+        <!--Navbar start -->
+        <section>
+            <nav class="navbar navbar-light bg_color shadow">
+                <div class="sidebar-for-mobile">
+                    <a href="" id="menu-toggle" class="navbar-toggler" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </a>
+                </div>
+                <div class="container">
+                    <p class="mx-auto project_name">Hospital Name</p>
+                </div>
+            </nav>
+        </section>
+        <!-- Navbar end -->
+        <!--sidebar for mobile version start-->
+        <div id="wrapper" class="toggled sidebar-for-mobile sidebar_toggle">
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav mt-5">
                     <li>
-                      Patient ID: <input type="text">
+                        <a href="#" class="text-uppercase for_cbc">cbc</a>
                     </li>
                     <li>
-                      Mobile number: <input type="text">
+                        <a href="#" class="text-uppercase">rbs</a>
                     </li>
                     <li>
-                      Consultant name: <input type="text">
+                        <a href="#">Chest X-Ray</a>
+                    </li>
+                    <li>
+                        <a href="#">Ultrasound</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-uppercase">ecg</a>
+                    </li>
+                    <li>
+                        <a href="#">CT Scan</a>
                     </li>
                 </ul>
-                </div>
-                <div class="form-fields-container">
-                  <ul class="form-fields p-0">
-                    <li>
-                      Patient name: <input type="text">
-                    </li>
-                    <li>
-                      Patient age: <input type="text">
-                    </li>
-                    <li>
-                      Gender: <input type="text">
-                    </li>
-                </ul>
-                </div>
-              </div>
-            </div> 
-            <!--end Patient form-->
-            <div class="bg_form p-4">
-              <!--text box-->
-              <textarea class="text_box w-100" name="" id="" cols="108" rows="11"></textarea>
-              <!--end text boiox-->
-              <!--comments section-->
-              <div class="form-group mt-2">
-                <label class="comments">Comments:</label>
-                <div class="border p-2 for_list">
-                    <ul>
-                        <li class="mb-3">
-                            Moderate degenerative disk disease, subchondral marrow signal alteration and osteophyte formation as described.
-                        </li>
-                        <li>
-                            Broad-based disk/osteophyte complex at C3-C4 mildly flattening the ventral aspect of the cord. This is complicated by mild bony narrowing of both neuroforamina.
-                        </li>
-                    </ul>
-                </div>
-              </div>
-              <!--end comments section-->
-              <!--Report and check option-->
-            <div class="container my-5 pt-5">
-              <div class="row ">
-                <div class="col-md-4 col_edit">
-                  <div class="for_select">
-                    <label for="exampleFormControlSelect1">Report by</label>
-                    <select class="form-select">
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                    </select>
-                  </div>
-                </div>
-                <!--save and print btn-->
-                <div class="col-md-4 for_hide">
-                  <div class="for_btn">
-                    <button type="button" class="btn btn-light">Save and Print</button>
-                  </div>
-                </div>
-                <!--save and print btn-->
-                <div class="col-md-4 col_modify">
-                  <div class="form-group float-right for_select">
-                    <label for="exampleFormControlSelect1">Checked by</label>
-                    <select class="form-select">
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                    </select>
-                  </div>
-                </div>
-                <!--save and print btn for mobile version-->
-                <div class="col-md-4 for_open">
-                  <div class="for_btn">
-                    <button type="button" class="btn btn-light">Save and Print</button>
-                  </div>
-                </div>
-                <!--end save and print btn mobile version-->
-              </div>
             </div>
-            <!--end of Report and check-->
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <script src="./js/index.js"></script>
-</body>
+        <!--sidebar for mobile version end-->
+        <section class="bg_body">
+            <div class="container-fluid">
+                <div class="row px-3 py-3">
+                    <!-- web sidebar start -->
+                    <div class="col-md-2 for_sidebar">
+                        <div class="sidebar_ul">
+                            <ul class="pt-3">
+                                <li class="text-uppercase for_cbc">cbc</li>
+                                <li class="text-uppercase">rbs</li>
+                                <li>Chest X-Ray</li>
+                                <li>Ultrasound</li>
+                                <li class="text-uppercase">ecg</li>
+                                <li>CT Scan</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--web sidebar end-->
+                    <!--start Patient form-->
+                    <div class="col-md-10 form_fields">
+                        <div class="row bg_form mb-4 m-0">
+                            <div class="col-md-12 w-100">
+                                <div class="form-fields-container">
+                                    <ul class="form-fields p-0">
+                                        <li>Patient ID: <input type="text" /></li>
+                                        <li>Mobile number: <input type="text" /></li>
+                                        <li>Consultant name: <input type="text" /></li>
+                                    </ul>
+                                </div>
+                                <div class="form-fields-container">
+                                    <ul class="form-fields p-0">
+                                        <li>Patient name: <input type="text" /></li>
+                                        <li>Patient age: <input type="text" /></li>
+                                        <li>Gender: <input type="text" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end Patient form-->
+                        <div class="bg_form p-4">
+                            <!--text box-->
+                            <textarea class="form-control text_box w-100" rows="11"></textarea>
+                            <!--end text box-->
+                            <!--comments section-->
+                            <div class="form-group mt-2">
+                                <label class="comments">Comments:</label>
+                                <div class="border p-2 for_list">
+                                    <ul>
+                                        <li class="mb-3">
+                                            Moderate degenerative disk disease, subchondral marrow signal alteration and osteophyte formation as described.
+                                        </li>
+                                        <li>
+                                            Broad-based disk/osteophyte complex at C3-C4 mildly flattening the ventral aspect of the cord. This is complicated by mild bony narrowing of both neuroforamina.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--end comments section-->
+                            <!--Report and check option-->
+                            <div class="container my-5 pt-5">
+                                <div class="row">
+                                    <div class="col-md-4 col_edit">
+                                        <div class="for_select">
+                                            <label>Report by</label>
+                                            <select class="form-select">
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--save and print btn-->
+                                    <div class="col-md-4 for_hide">
+                                        <div class="for_btn">
+                                            <button type="button" class="btn btn-light">Save and Print</button>
+                                        </div>
+                                    </div>
+                                    <!--save and print btn-->
+                                    <div class="col-md-4 col_modify">
+                                        <div class="form-group float-right for_select">
+                                            <label>Checked by</label>
+                                            <select class="form-select">
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--save and print btn for mobile version-->
+                                    <div class="col-md-4 for_open">
+                                        <div class="for_btn">
+                                            <button type="button" class="btn btn-light">Save and Print</button>
+                                        </div>
+                                    </div>
+                                    <!--end save and print btn mobile version-->
+                                </div>
+                            </div>
+                            <!--end of Report and check-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./assets/js/index.js"></script>
+    </body>
 </html>
