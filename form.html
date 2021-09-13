@@ -11,7 +11,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="./assets/css/custom.css" />
         <link rel="stylesheet" href="./assets/css/media-query.css" />
-        <script src="./assets/vendor/jquery/jquery-3.6.0.min.js"></script>
         <title>Form One</title>
     </head>
     <body>
@@ -28,7 +27,7 @@
                     <label><small>Search ID</small></label>
                     <div class="has-search input-group-sm">
                         <span class="fa fa-search form-control-feedback"></span>
-                        <input type="text" class="form-control w-75" />
+                        <input type="text" class="form-control" />
                     </div>
                 </div>
             </nav>
@@ -94,14 +93,14 @@
                         <div class="row bg_form mb-4 m-0">
                             <div class="col-md-12 w-100 pt-lg-3">
                                 <div class="form-fields-container">
-                                    <ul class="form-fields p-0">
+                                    <ul class="form-fields p-0 id-one">
                                         <li>Patient ID: <input class="input-field" type="text" /></li>
                                         <li>Mobile number: <input type="text" /></li>
                                         <li>Consultant name: <input type="text" /></li>
                                     </ul>
                                 </div>
                                 <div class="form-fields-container">
-                                    <ul class="form-fields p-0">
+                                    <ul class="form-fields p-0 id-two">
                                         <li>Patient name: <input type="text" /></li>
                                         <li>Patient age: <input type="text" /></li>
                                         <li>Gender: <input type="text" /></li>
@@ -160,12 +159,12 @@
                             </table>
                             <!--end of table-->
                             <!--Report and check option-->
-                            <div class="container p-0 my-5 pt-5">
+                            <div class="container-fluid p-0 my-5 pt-5">
                                 <div class="row">
                                     <div class="col col_edit">
                                         <div class="form-group for_select">
                                             <label class="mb-2">Report by</label>
-                                            <select class="form-select form-select-sm">
+                                            <select class="form-select form-select-sm w-75">
                                                 <option>Test</option>
                                                 <option>Test1</option>
                                                 <option>Test2</option>
@@ -180,9 +179,9 @@
                                     </div>
                                     <!--save and print btn-->
                                     <div class="col col_modify">
-                                        <div class="form-group float-end for_select">
+                                        <div class="form-group for_select">
                                             <label class="mb-2">Checked by</label>
-                                            <select class="form-select form-select-sm">
+                                            <select class="form-select form-select-sm w-75">
                                                 <option>Test</option>
                                                 <option>Test1</option>
                                                 <option>Test2</option>
@@ -204,6 +203,7 @@
                 </div>
             </div>
         </div>
+        <script src="./assets/vendor/jquery/jquery-3.6.0.min.js"></script>
         <script src="./assets/js/custom.js"></script>
     </body>
 </html>
